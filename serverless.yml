@@ -1,0 +1,33 @@
+service: image-resizing-python
+
+provider:
+  name: aws
+  runtime: python2.7
+  region: eu-west-1
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - s3:*
+      Resource: '*'
+
+functions:
+  resize:
+    handler: handler.call
+    environment:
+      BUCKET: resized-images-python
+      REGION: eu-west-1
+    events:
+      - http:
+          path: /{size}/{image}
+          method: get
+
+resources:
+  Resources:
+    ResizedImages:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: resized-images-python
+
+plugins:
+  - serverless-s3-local
+  - serverless-offline

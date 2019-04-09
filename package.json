@@ -1,0 +1,10 @@
+{
+  "name": "image-resizing-ruby",
+  "description": "",
+  "version": "0.1.0",
+  "dependencies": {},
+  "devDependencies": {
+    "serverless-offline": "^4.9.1",
+    "serverless-s3-local": "^0.3.23"
+  }
+}

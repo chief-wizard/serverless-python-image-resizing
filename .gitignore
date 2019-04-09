@@ -1,0 +1,7 @@
+node_modules
+.serverless
+vendor/
+PIL
+Pillow-*
+buckets/
+__pycache__
