@@ -1,10 +1,11 @@
 {
-  "name": "image-resizing-ruby",
+  "name": "image-resizing-python",
   "description": "",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "dependencies": {},
   "devDependencies": {
     "serverless-offline": "^4.9.1",
+    "serverless-python-requirements": "^4.3.0",
     "serverless-s3-local": "^0.3.23"
   }
 }

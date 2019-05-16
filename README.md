@@ -7,17 +7,16 @@ In this example, we set up a dynamic image resizing solution with AWS S3 and a S
 In order to deploy the function, you will need the following:
 
 - API credentials for AWS with persmissions to manage S3, IAM and API Gateway
-- Docker installed locally
+- If not on Linux - Docker installed locally 
 
 ## Deploying the Serverless project
 
-1. Add your AWS credentials into `deploy.sh`
-2. Deploy the Serverless project using docker:
+1. Make a .env file with your AWS credentials, as in .env.example
+2. Deploy the Serverless project:
 
 ```
-docker build .
-docker images
-docker run <container-id>
+source .env
+sls deploy
 ```
 
 ## Example usage
